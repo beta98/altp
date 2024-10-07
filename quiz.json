@@ -1,0 +1,200 @@
+let prizePool = [
+	"200.000",
+	"400.000",
+	"600.000",
+	"1.000.000",
+	"2.000.000",
+	"3.000.000",
+	"6.000.000",
+	"10.000.000",
+	"14.000.000",
+	"22.000.000",
+	"30.000.000",
+	"40.000.000",
+	"80.000.000",
+	"150.000.000",
+	"250.000.000",
+]
+
+let jsonObject = [
+	{
+		"content": "Đâu là một loại hình chợ tạm tự phát thường xuất hiện trong các khu dân cư?",
+		"answers": {
+			"0": "Ếch",
+			"1": "Cóc",
+			"2": "Thằn lằn",
+			"3": "Nhái"
+		},
+		"isCorrect": "1"
+	},
+	{
+		"content": "Đâu là tên một loại chợ?",
+		"answers": {
+			"0": "Ếch",
+			"1": "Nhái",
+			"2": "Thằn lằn",
+			"3": "Cóc"
+		},
+		"isCorrect": "3"
+	},
+	{
+		"content": "Đâu là tên một bãi biển ở Quảng Bình?",
+		"answers": {
+			"0": "Đá Lăn",
+			"1": "Đá Nhảy",
+			"2": "Đá Chạy",
+			"3": "Đá Bò"
+		},
+		"isCorrect": "1"
+	},
+	{
+		"content": "Đâu là tên một bãi biển đẹp ở Quảng Bình?",
+		"answers": {
+			"0": "Đá Lăn",
+			"1": "Đá Chạy",
+			"2": "Đá Nhảy",
+			"3": "Đá Bò"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Haiku là thể thơ truyền thống của nước nào?",
+		"answers": {
+			"0": "Nhật Bản",
+			"1": "Mông Cổ",
+			"2": "Trung Quốc",
+			"3": "Hàn Quốc"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Thơ Hai-cư là thể thơ truyền thống của nước nào?",
+		"answers": {
+			"0": "Hàn Quốc",
+			"1": "Mông Cổ",
+			"2": "Nhật Bản",
+			"3": "Triều Tiên"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Chiến trường Đắk Tô - Tân Cảnh, nơi diễn ra chiến thắng vang đội năm 1972, nay thuộc địa bàn tỉnh nào ở Tây Nguyên?",
+		"answers": {
+			"0": "Kon Tum",
+			"1": "Đắk Lắk",
+			"2": "Gia Lai",
+			"3": "Đắk Nông"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Đâu là tên một loại bánh Huế?",
+		"answers": {
+			"0": "Khoái",
+			"1": "Sướng",
+			"2": "Thích",
+			"3": "Vui"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Tượng đài Chiến thắng Điện Biên Phủ được dựng trên ngọn đồi nào?",
+		"answers": {
+			"0": "D1",
+			"1": "C1",
+			"2": "A1",
+			"3": "E1"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Màu chủ đạo của tờ tiền Polymer mệnh giá 500.000 đồng là gì?",
+		"answers": {
+			"0": "Đỏ",
+			"1": "Xanh",
+			"2": "Vàng",
+			"3": "Tím"
+		},
+		"isCorrect": "1"
+	},
+	{
+		"content": "Bảo tàng Hồ Chí Minh được thiết kế theo dáng một loài hoa nào?",
+		"answers": {
+			"0": "Hoa sen",
+			"1": "Hoa hướng dương",
+			"2": "Hoa hồng",
+			"3": "Hoa đào"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Tháng âm lịch nào còn được gọi là 'Tháng cô hồn'?",
+		"answers": {
+			"0": "Tháng bảy",
+			"1": "Tháng tám",
+			"2": "Tháng chín",
+			"3": "Tháng mười"
+		},
+		"isCorrect": "0"
+	},
+	{
+		"content": "Có câu thành ngữ: \"Đi mây về ...\" gì?",
+		"answers": {
+			"0": "Mây",
+			"1": "Núi",
+			"2": "Gió",
+			"3": "Biển"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Đâu là một cách nói ví von về những trường hợp hay gặp vận hạn, rủi ro?",
+		"answers": {
+			"0": "Sao quả cân",
+			"1": "Sao quả yến",
+			"2": "Sao quả tạ",
+			"3": "Sao quả tấn"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Gỗ mun có màu gì?",
+		"answers": {
+			"0": "Vàng",
+			"1": "Nâu",
+			"2": "Đen",
+			"3": "Xanh"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Tân Tổng thống Ukraine Volodymyr Zelensky làm nghề gì trước khi nhậm chức?",
+		"answers": {
+			"0": "Võ sĩ quyền anh",
+			"1": "Diễn viên hài",
+			"2": "Bác sĩ phẫu thuật",
+			"3": "Doanh nhân"
+		},
+		"isCorrect": "1"
+	},
+	{
+		"content": "Tình cảnh đơn độc, yếu thế không có chỗ dựa là nghĩa của câu nào?",
+		"answers": {
+			"0": "Thân lừa ưa nặng",
+			"1": "Thân tàn ma dại",
+			"2": "Thân cô thế cô",
+			"3": "Thân làm tội đời"
+		},
+		"isCorrect": "2"
+	},
+	{
+		"content": "Đâu là tên một loại đồ chơi dân gian của trẻ em?",
+		"answers": {
+			"0": "Tò he",
+			"1": "Tò mò",
+			"2": "Tò vò",
+			"3": "Tến tò"
+		},
+		"isCorrect": "0"
+	},
+]
